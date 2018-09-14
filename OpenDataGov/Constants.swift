@@ -10,4 +10,5 @@ import Foundation
 
 struct Constants {
     static let UVITableCell = "UVITableCell"
+    static let AQITableCell = "AQITableCell"
 }

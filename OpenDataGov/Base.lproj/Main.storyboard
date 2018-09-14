@@ -9,6 +9,91 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--AQI-->
+        <scene sceneID="9Z7-sZ-egB">
+            <objects>
+                <tableViewController id="dkE-kz-RJ7" customClass="AQITableViewController" customModule="OpenDataGov" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="45x-lb-Gjv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AQITableCell" rowHeight="280" id="bRe-T6-CZc" customClass="AQITableViewCell" customModule="OpenDataGov" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="280"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bRe-T6-CZc" id="bKA-bS-9K4">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="279.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="County" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s3Y-6y-4QC">
+                                            <rect key="frame" x="36" y="21" width="56" height="50"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="sdV-P4-bAs"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h1M-hv-hu3">
+                                            <rect key="frame" x="36" y="81" width="49.5" height="50"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="Uf4-ka-PaL"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AQI" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LUG-W4-995">
+                                            <rect key="frame" x="36" y="141" width="27.5" height="50"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="XHO-5g-nca"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PublishTime" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Th-U0-hc2">
+                                            <rect key="frame" x="36" y="201" width="313" height="50"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="hgh-q6-99a"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="h1M-hv-hu3" firstAttribute="top" secondItem="s3Y-6y-4QC" secondAttribute="bottom" constant="10" id="57c-XX-eYg"/>
+                                        <constraint firstItem="h1M-hv-hu3" firstAttribute="leading" secondItem="bKA-bS-9K4" secondAttribute="leadingMargin" constant="20" id="HxI-0g-L8a"/>
+                                        <constraint firstItem="s3Y-6y-4QC" firstAttribute="leading" secondItem="bKA-bS-9K4" secondAttribute="leadingMargin" constant="20" id="KLg-tY-3bm"/>
+                                        <constraint firstItem="s3Y-6y-4QC" firstAttribute="top" secondItem="bKA-bS-9K4" secondAttribute="topMargin" constant="10" id="LUH-BL-3ca"/>
+                                        <constraint firstItem="LUG-W4-995" firstAttribute="top" secondItem="h1M-hv-hu3" secondAttribute="bottom" constant="10" id="LZ8-Cs-AcX"/>
+                                        <constraint firstItem="6Th-U0-hc2" firstAttribute="top" secondItem="LUG-W4-995" secondAttribute="bottom" constant="10" id="MEV-LT-Zar"/>
+                                        <constraint firstItem="LUG-W4-995" firstAttribute="leading" secondItem="bKA-bS-9K4" secondAttribute="leadingMargin" constant="20" id="ROc-Lq-XsN"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="6Th-U0-hc2" secondAttribute="trailing" constant="10" id="WQ7-zo-xFx"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="6Th-U0-hc2" secondAttribute="bottom" constant="10" id="czL-aL-Xii"/>
+                                        <constraint firstItem="6Th-U0-hc2" firstAttribute="leading" secondItem="bKA-bS-9K4" secondAttribute="leadingMargin" constant="20" id="utZ-cJ-ub5"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="AQILabel" destination="LUG-W4-995" id="Xqz-3V-FMM"/>
+                                    <outlet property="County" destination="s3Y-6y-4QC" id="PFd-8h-Phh"/>
+                                    <outlet property="PublishTimeLabel" destination="6Th-U0-hc2" id="qyw-VJ-Clh"/>
+                                    <outlet property="StatusLabel" destination="h1M-hv-hu3" id="ugU-ia-8oa"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="dkE-kz-RJ7" id="KpP-6c-CdU"/>
+                            <outlet property="delegate" destination="dkE-kz-RJ7" id="D6q-HD-xcr"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="AQI" id="X4I-uY-ekG"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pTI-7U-mcc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-495.19999999999999" y="-20.239880059970016"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Rwm-Hf-frC">
             <objects>
@@ -18,15 +103,21 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="selectedIndex">
+                            <integer key="value" value="0"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <segue destination="xQc-uU-rhz" kind="relationship" relationship="viewControllers" id="ehX-4k-xsT"/>
+                        <segue destination="dkE-kz-RJ7" kind="relationship" relationship="viewControllers" id="EIo-XM-EwO"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NeX-Cw-pmV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1116" y="-482"/>
+            <point key="canvasLocation" x="-1298" y="-792"/>
         </scene>
-        <!--Item-->
+        <!--UVI-->
         <scene sceneID="qbl-bb-Z2e">
             <objects>
                 <tableViewController id="xQc-uU-rhz" customClass="UVITableViewController" customModule="OpenDataGov" customModuleProvider="target" sceneMemberID="viewController">
@@ -104,11 +195,11 @@
                             <outlet property="delegate" destination="xQc-uU-rhz" id="ayt-Ox-qDF"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="tcx-6F-fOa"/>
+                    <tabBarItem key="tabBarItem" title="UVI" id="tcx-6F-fOa"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zlf-jh-cVi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-378.39999999999998" y="-483.50824587706148"/>
+            <point key="canvasLocation" x="-335" y="-792"/>
         </scene>
     </scenes>
 </document>

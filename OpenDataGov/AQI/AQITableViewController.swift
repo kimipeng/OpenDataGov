@@ -1,34 +1,42 @@
 //
-//  UVITableViewController.swift
+//  AUITableViewController.swift
 //  OpenDataGov
 //
-//  Created by Kimi Peng on 2018/8/29.
+//  Created by Kimi Peng on 2018/9/13.
 //  Copyright © 2018年 Kimi Peng. All rights reserved.
 //
 
 import UIKit
+import Alamofire
 
-class UVITableViewController: UITableViewController {
+class AQITableViewController: UITableViewController {
 
-    var uviResults = [UVI]()
+    var aqiResults = [AQI]()
 
+
+//    let decoder = JSONDecoder()
+//    if let data = data, let uviResult = try? decoder.decode([UVI].self, from: data) {
+//
+//        self.uviResults = uviResult
+//        DispatchQueue.main.async {
+//            self.tableView.reloadData()
+//        }
+//    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if let urlStr = OpenDataUrl.uvi.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed), let url = URL(string: urlStr) {
+        print("test")
 
-            let task = URLSession.shared.dataTask(with: url) { (data, reponse, error) in
-                let decoder = JSONDecoder()
-                if let data = data, let uviResult = try? decoder.decode([UVI].self, from: data) {
-                
-                    self.uviResults = uviResult
-                    DispatchQueue.main.async {
-                        self.tableView.reloadData()
-                    }
+        Alamofire.request(OpenDataUrl.aui).responseJSON { (response) in
+            
+            let decoder = JSONDecoder()
+            if let data = response.data, let aqiResults = try? decoder.decode([AQI].self, from: data) {
+                self.aqiResults = aqiResults
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
                 }
             }
-            task.resume()
         }
 
     }
@@ -40,25 +48,27 @@ class UVITableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-
-        return uviResults.count
+        // #warning Incomplete implementation, return the number of rows
+        return aqiResults.count
     }
 
 
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //let cell = tableView.dequeueReusableCell(withIdentifier: Constants.UVITableCell, for: indexPath) as! UVITableViewCell
 
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.UVITableCell, for: indexPath) as? UVITableViewCell else {
-            return UVITableViewCell()
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.AQITableCell, for: indexPath) as? AQITableViewCell else {
+            return AQITableViewCell()
         }
 
-        let uviData = uviResults[indexPath.row]
-        cell.contyLable.text = "所在地: " + uviData.County
-        cell.uviLabel.text = "監測值: " + uviData.UVI
-        cell.publishAgencyLabel.text = "發佈地點: " + uviData.PublishAgency
-        cell.publishTimeLabel.text = "發佈時間: " + uviData.PublishTime
+        let aqiData = aqiResults[indexPath.row]
+        
+        cell.County.text = "所在地: " + aqiData.County
+        cell.StatusLabel.text = "狀態: " + aqiData.Status
+        cell.AQILabel.text = "監測值: " + aqiData.AQI
+        cell.PublishTimeLabel.text = "發佈時間: " + aqiData.PublishTime
+        
+        
         return cell
-
     }
 
 

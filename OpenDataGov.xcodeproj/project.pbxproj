@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E79435C9734FDB40DF700D1 /* Pods_OpenDataGov.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F90BA7F59965487CD2B4C327 /* Pods_OpenDataGov.framework */; };
+		B4BDE37A214A48760007DEA4 /* AQITableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BDE379214A48760007DEA4 /* AQITableViewController.swift */; };
+		B4BDE37C214A48990007DEA4 /* AQITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BDE37B214A48990007DEA4 /* AQITableViewCell.swift */; };
+		B4BDE37E214A4D4E0007DEA4 /* AQI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BDE37D214A4D4E0007DEA4 /* AQI.swift */; };
 		B4FA820F21364FB000CE18B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FA820E21364FB000CE18B4 /* AppDelegate.swift */; };
 		B4FA821421364FB000CE18B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4FA821221364FB000CE18B4 /* Main.storyboard */; };
 		B4FA821621364FB200CE18B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4FA821521364FB200CE18B4 /* Assets.xcassets */; };
@@ -19,6 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B4BDE379214A48760007DEA4 /* AQITableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQITableViewController.swift; sourceTree = "<group>"; };
+		B4BDE37B214A48990007DEA4 /* AQITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQITableViewCell.swift; sourceTree = "<group>"; };
+		B4BDE37D214A4D4E0007DEA4 /* AQI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQI.swift; sourceTree = "<group>"; };
 		B4FA820B21364FB000CE18B4 /* OpenDataGov.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenDataGov.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4FA820E21364FB000CE18B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4FA821321364FB000CE18B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -30,6 +37,9 @@
 		B4FA8224213675BF00CE18B4 /* UVITableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UVITableViewController.swift; sourceTree = "<group>"; };
 		B4FA82272136805C00CE18B4 /* UVI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UVI.swift; sourceTree = "<group>"; };
 		B4FA8229213685F300CE18B4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D3B69F2723ADC5EEE98F7060 /* Pods-OpenDataGov.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenDataGov.release.xcconfig"; path = "Pods/Target Support Files/Pods-OpenDataGov/Pods-OpenDataGov.release.xcconfig"; sourceTree = "<group>"; };
+		DEE3C174B3F1CE178CD99950 /* Pods-OpenDataGov.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenDataGov.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OpenDataGov/Pods-OpenDataGov.debug.xcconfig"; sourceTree = "<group>"; };
+		F90BA7F59965487CD2B4C327 /* Pods_OpenDataGov.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OpenDataGov.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,17 +47,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E79435C9734FDB40DF700D1 /* Pods_OpenDataGov.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B9ED42FC573CB3C45FC5577 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DEE3C174B3F1CE178CD99950 /* Pods-OpenDataGov.debug.xcconfig */,
+				D3B69F2723ADC5EEE98F7060 /* Pods-OpenDataGov.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B4BDE37F214A4E5F0007DEA4 /* AQI */ = {
+			isa = PBXGroup;
+			children = (
+				B4BDE37B214A48990007DEA4 /* AQITableViewCell.swift */,
+				B4BDE379214A48760007DEA4 /* AQITableViewController.swift */,
+				B4BDE37D214A4D4E0007DEA4 /* AQI.swift */,
+			);
+			path = AQI;
+			sourceTree = "<group>";
+		};
 		B4FA820221364FB000CE18B4 = {
 			isa = PBXGroup;
 			children = (
 				B4FA820D21364FB000CE18B4 /* OpenDataGov */,
 				B4FA820C21364FB000CE18B4 /* Products */,
+				5B9ED42FC573CB3C45FC5577 /* Pods */,
+				DA3EBD66B8CFB30DEB2F672D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +102,7 @@
 				B4FA822021364FE800CE18B4 /* OpenData.swift */,
 				B4FA8229213685F300CE18B4 /* Constants.swift */,
 				B4FA82262136768D00CE18B4 /* UVI */,
+				B4BDE37F214A4E5F0007DEA4 /* AQI */,
 			);
 			path = OpenDataGov;
 			sourceTree = "<group>";
@@ -84,6 +117,14 @@
 			path = UVI;
 			sourceTree = "<group>";
 		};
+		DA3EBD66B8CFB30DEB2F672D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F90BA7F59965487CD2B4C327 /* Pods_OpenDataGov.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -91,9 +132,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B4FA821D21364FB200CE18B4 /* Build configuration list for PBXNativeTarget "OpenDataGov" */;
 			buildPhases = (
+				861035EDD5CC752D131568C5 /* [CP] Check Pods Manifest.lock */,
 				B4FA820721364FB000CE18B4 /* Sources */,
 				B4FA820821364FB000CE18B4 /* Frameworks */,
 				B4FA820921364FB000CE18B4 /* Resources */,
+				38D0EDB0BCE62207CAB2F363 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -150,13 +193,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		38D0EDB0BCE62207CAB2F363 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-OpenDataGov/Pods-OpenDataGov-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OpenDataGov/Pods-OpenDataGov-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		861035EDD5CC752D131568C5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OpenDataGov-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B4FA820721364FB000CE18B4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4BDE37E214A4D4E0007DEA4 /* AQI.swift in Sources */,
 				B4FA82282136805C00CE18B4 /* UVI.swift in Sources */,
 				B4FA822121364FE800CE18B4 /* OpenData.swift in Sources */,
+				B4BDE37A214A48760007DEA4 /* AQITableViewController.swift in Sources */,
+				B4BDE37C214A48990007DEA4 /* AQITableViewCell.swift in Sources */,
 				B4FA820F21364FB000CE18B4 /* AppDelegate.swift in Sources */,
 				B4FA8225213675BF00CE18B4 /* UVITableViewController.swift in Sources */,
 				B4FA8223213675A000CE18B4 /* UVITableViewCell.swift in Sources */,
@@ -304,6 +389,7 @@
 		};
 		B4FA821E21364FB200CE18B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DEE3C174B3F1CE178CD99950 /* Pods-OpenDataGov.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -323,6 +409,7 @@
 		};
 		B4FA821F21364FB200CE18B4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3B69F2723ADC5EEE98F7060 /* Pods-OpenDataGov.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

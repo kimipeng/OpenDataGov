@@ -1,0 +1,6 @@
+framework module Pods_OpenDataGov {
+  umbrella header "Pods-OpenDataGov-umbrella.h"
+
+  export *
+  module * { export * }
+}
